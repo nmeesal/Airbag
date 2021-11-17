@@ -1,5 +1,6 @@
 <html>
 <head>
+
  <title>AIRBAG T0125 DEFECT PREDICTION </title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -271,72 +272,25 @@
     </style>
 </head>
 
-	<script type="text/javascript">
-		function autoRefreshPage()
-		{
-			window.location = window.location.href;
-		}
-		setInterval('autoRefreshPage()', 60000);
-	</script>
-    <form name="DataForm" method="post" action="azureweb.aspx" id="DataForm">
-			<table class="screen_header">
-				<tr>
-					<td class="Contact" colspan=20></td>
-				</tr>
-			</table>
+<div class="login">
+	<h1>AIRBAG T0125 PREDICTION</h1>
 	
-	        <table class="screen_header">
-			<tr>
-				<td class ="image"><img src="daimler3.gif" alt=""></td>
-				<td class="header text-center" text-align="center">Air Bag Defect T_0125 PREDICTION</td>
-				<td class ="image"><img src="daimler1.gif" alt="" align="center"></td>
-			
-			</tr>	
-         </table>
-		 
-		 
-   <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
- <tr bgcolor="#FFFFFF">
-  <th width="800" colspan="13" align="right" valign="top" scope="row">
-    <table border="0" align="right" cellpadding="0" cellspacing="0">
-    <tr> 
-	  <div class="container">
-		<div class="row">
 
-		  <form action="{{ url_for('predict')}}"method="post">
-		  	<div class="col-sm-9">
-			 <div class="form-group  purple-border">
-				  <label for="comment">Enter the Input Option Codes:</label>
-				  <textarea class="form-control" rows="2" id="query1" name="query1" rows="2" cols="5" autofocus></textarea>
-			</div>
-				<div class="col-sm-3">
-			<button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
-			<td>
-			</td>
-			<div class="row"> 
-			<div class="col-sm-9">
-						 <div class="form-group  purple-border">
-				  <label for="comment">PREDICTION Results:</label>
-			<textarea class="form-control" rows="2" id="comment" name="query6" rows="2" cols="5" autofocus></textarea>
-			<textarea class="form-control" rows="2" id="comment" name="query7" rows="2" cols="5" autofocus></textarea>
-			</div>
-		</div>
-	</div>		
-			</div>
-		  </form>
-		  </div>
-		  </tr>
-	</table>	 
-  <table class="screen_header">
-				<tr>
-					<td class="Contact" colspan=10>Test Case Developed by Murari</td>
-				</tr>
-			</table>	
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_defects')}}"method="post">
+    	<input type="text" name="CODES" placeholder="CODES" required="required" />
+        
 	
-		 
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">CLICK HERE to PREDICT AIRBAG DEFECT </button>
+		
+		
     </form>
 
+   <br>
+   <br>
+   {{ prediction_text }}
 
-</body>
+ </div>
 
 </html>
