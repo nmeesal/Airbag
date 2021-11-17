@@ -1,0 +1,342 @@
+<html>
+<head>
+ <title>AIRBAG T0125 DEFECT PREDICTION </title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            padding: 3px;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        table {
+            width: 98%;
+            box-sizing: border-box;
+            border-collapse: collapse;
+            font-size: 50px;
+			
+        }
+        table td,
+        table th {
+            padding: 10px;
+            border-bottom: 1px solid #444444;
+            color: #ffffff;
+        }
+
+		table th {
+            text-transform: uppercase;
+            background-color: #222222;
+            color: #b8b8b8;
+        }
+
+        table caption {
+            font-size: 120px;
+            padding: 5px;
+            font-weight: normal;
+            background-color: #333;
+            text-align: left;
+            color: #b8b8b8;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #222222;
+        }
+		
+		 table tr:nth-child(2) {
+				color: #E1E1E1;
+        }
+				
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+		
+		.text-right {
+            text-align: right;
+        }
+        .color-red {
+            color: red;
+        }
+		
+		.color-green {
+            color: #39ff14;
+        }
+		
+		.header {
+            font-size: 120px;
+            padding: 5px;
+            font-weight: normal;
+            background-color: #00677f;
+            text-align: center;
+            color: #b8b8b8;
+        }
+		.sub_header {
+
+            font-size: 70px;
+            padding: 5px;
+            font-weight: normal;
+            background-color: #b8b8b8;
+            text-align: center;
+            color: #00677f;
+			
+        }
+		
+		.arrow  {
+			text-align: right;
+			font-size: 30px;
+			color: green;
+			word-wrap: normal;
+			
+		}
+		
+		.image {
+            background-color: #00677f;
+            color: #b8b8b8;
+		}
+
+
+        table#topDefects td {
+            text-transform: uppercase;
+			text-align: center;
+			
+        }
+		
+		table#ftcShifts  td {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+        }
+		
+		table#AS  td {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			
+        }
+		table#AS   {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			float:left;
+			margin:30px;
+			
+        }
+		
+		table#AS th{
+			font-size: 90px;
+		}
+				table#CT  td {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			
+        }
+		
+		
+		table#CT   {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			float:left;
+			margin:30px;
+			
+        }
+		
+		table#CT th{
+			font-size: 90px;
+		}
+		
+		table#MissingParts  td {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			
+        }
+		table#MissingParts   {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			float:center;
+			margin:80px;
+        }
+  
+		
+		table#TQ  td {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			
+        }
+		table#TQ   {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			float:left;
+			margin:30px;
+			
+        }
+		
+		table#TQ th{
+			font-size: 90px;
+		}
+		
+		table#z3  td {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			
+        }
+		table#z3   {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			float:left;
+			margin:30px;
+			
+        }
+		
+		table#z3 th{
+			font-size: 90px;
+		}
+		
+			
+		table#z3  td {
+            text-transform: uppercase;
+			font-size:  90px;
+			text-align: center;
+			
+        }
+		table#z3   {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			float:left;
+			margin:30px;
+			
+        }
+		
+		table#z3 th{
+			font-size: 90px;
+		}
+
+		table#MissingParts th{
+			font-size: 90px;
+		}
+		table#PSOP  td {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			
+        }
+		table#PSOP   {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			float:left;
+			margin:30px;
+			
+        }
+		
+		table#PSOP th{
+			font-size: 90px;
+		}
+				table#z1  td {
+            text-transform: uppercase;
+			font-size: 90px;
+			text-align: center;
+			
+        }
+		
+		.luhd{
+			font-size: 50px;
+			background-color:#00677f;
+			color: #b8b8b8;
+			border: none; 
+			text-align:center;
+			padding-left: 250px;
+ 
+		}
+		.screen_header{
+			width:100%
+		}
+
+    </style>
+</head>
+
+	<script type="text/javascript">
+		function autoRefreshPage()
+		{
+			window.location = window.location.href;
+		}
+		setInterval('autoRefreshPage()', 60000);
+	</script>
+    <form name="DataForm" method="post" action="azureweb.aspx" id="DataForm">
+			<table class="screen_header">
+				<tr>
+					<td class="Contact" colspan=20></td>
+				</tr>
+			</table>
+	
+	        <table class="screen_header">
+			<tr>
+				<td class ="image"><img src="daimler3.gif" alt=""></td>
+				<td class="header text-center" text-align="center">Air Bag Defect T_0125 PREDICTION</td>
+				<td class ="image"><img src="daimler1.gif" alt="" align="center"></td>
+			
+			</tr>	
+         </table>
+		 
+		 
+   <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+ <tr bgcolor="#FFFFFF">
+  <th width="800" colspan="13" align="right" valign="top" scope="row">
+    <table border="0" align="right" cellpadding="0" cellspacing="0">
+    <tr> 
+	  <div class="container">
+		<div class="row">
+
+		  <form action="{{ url_for('predict')}}"method="post">
+		  	<div class="col-sm-9">
+			 <div class="form-group  purple-border">
+				  <label for="comment">Enter the Input Option Codes:</label>
+				  <textarea class="form-control" rows="2" id="query1" name="query1" rows="2" cols="5" autofocus></textarea>
+			</div>
+				<div class="col-sm-3">
+			<button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+			<td>
+			</td>
+			<div class="row"> 
+			<div class="col-sm-9">
+						 <div class="form-group  purple-border">
+				  <label for="comment">PREDICTION Results:</label>
+			<textarea class="form-control" rows="2" id="comment" name="query6" rows="2" cols="5" autofocus></textarea>
+			<textarea class="form-control" rows="2" id="comment" name="query7" rows="2" cols="5" autofocus></textarea>
+			</div>
+		</div>
+	</div>		
+			</div>
+		  </form>
+		  </div>
+		  </tr>
+	</table>	 
+  <table class="screen_header">
+				<tr>
+					<td class="Contact" colspan=10>Test Case Developed by Murari</td>
+				</tr>
+			</table>	
+	
+		 
+    </form>
+
+
+</body>
+
+</html>
