@@ -1,21 +1,40 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>DEFECT AIRBAG DETECTION</title>
-  </head>
 
-<body>
- <div class="login">
-	<h1>DEFECT AIRBAG DETECTION</h1>
+ <title> AIRBAGS T0125 DEFECT PREDICTION </title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+  <style type="text/css">
+form {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+    </style>  
+<div class="login">
+	<h1><p style="text-align:center"> AIRBAGS T0125 PREDICTION </h1>
+	
+<img src="Daimler1.gif" alt="IT_MBV" class="center">
+
+<h1><p style="text-align:center">ENTER OPTION CODES BELOW</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict_defects')}}"method="post">
-    	<input type="text" name="OPTION_CODES" placeholder="OPTION_CODES" required="required" />
-        <input type="text" name="OPTION_CODES_1" placeholder="OPTION_CODES_1" required="required" />
+    	<input type="text" name="CODES" placeholder="CODES" required="required" />
+        
 	
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">CLICK HERE FOR AIRBAG DEFECT DETECTION</button>
+        <button type="submit" class="btn btn-primary">CLICK HERE to PREDICT AIRBAG DEFECT </button>
+		
+		
     </form>
 
    <br>
@@ -23,3 +42,5 @@
    {{ prediction_text }}
 
  </div>
+
+</html>
